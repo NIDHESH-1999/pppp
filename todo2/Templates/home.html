@@ -1,0 +1,69 @@
+    {% extends "base.html" %}
+    
+    {% block content %}
+    
+
+
+        <h1>hello {{user.username}}</h1>
+        <h1>how was your task going</h1>
+        <div class="row">
+        <div class="container pt-4">
+        <div class="col-lg-5 shadow mx-auto p-0">
+        <div class="alert alert-success">TODO list</div>
+        <div class="p-4">
+        <form action="/todo6/" method="POST">
+            {% csrf_token %}
+        {{form.as_ul}}
+        <input type="submit" value=add LIST>
+        </form>
+        </div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="border">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            {% csrf_token %}
+                            
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            {% for todo in todos %}
+                            
+                             <td>{{todo.Date}}</td>
+
+                             <td>{{todo.Title}}</td>
+                             <td>{{todo.Status}}</td>
+                             <td>{{todo.Priority}}</td>
+                             </tr>
+
+                            {% endfor %}
+                        
+                        </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        </div>
+
+
+         
+        
+
+
+
+
+        {% endblock %}
