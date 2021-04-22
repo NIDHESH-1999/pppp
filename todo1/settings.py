@@ -24,9 +24,9 @@ TEMPLATES=BASE_DIR/"Templates"
 SECRET_KEY = 'django-insecure-hdw+plj^k=@kc(r1lb8p7^&htn#=bg*03fuh(hq&koz8%dsnx4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG ='False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
