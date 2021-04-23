@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 from todo2 import views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="login/index.html")),
+    path("", TemplateView.as_view(template_name="index.html")),
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path("home/",views.home,name='home'),
